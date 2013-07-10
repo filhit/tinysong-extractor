@@ -39,7 +39,7 @@ namespace ExtractPlaylistFromTinySong
             request.AddParameter("format", "json"); 
             request.AddParameter("limit", 32);
             request.AddParameter("key", apiKey);
-            request.AddUrlSegment("query", "Gogol Bordello"); 
+            request.AddUrlSegment("query", query); 
                         
             var response = client.Execute<List<Song>>(request);
             return response.Data;
